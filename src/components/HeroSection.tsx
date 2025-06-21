@@ -1,17 +1,19 @@
-
 import { Shield } from 'lucide-react';
+import SplineBackground from './SplineBackground';
 
 const HeroSection = () => {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-linksuraksha-purple/20 rounded-full blur-3xl animate-pulse" />
-        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-linksuraksha-glow/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-radial from-linksuraksha-purple/5 to-transparent rounded-full" />
+      {/* Spline 3D Background */}
+      <SplineBackground />
+      
+      {/* Existing Animated Background Elements - kept for additional depth */}
+      <div className="absolute inset-0 overflow-hidden z-10">
+        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-linksuraksha-purple/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute top-3/4 right-1/4 w-96 h-96 bg-linksuraksha-glow/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-20">
         {/* Hero Badge */}
         <div className="glassmorphism inline-flex items-center space-x-2 px-6 py-3 rounded-full mb-8 fade-in-up">
           <Shield className="w-5 h-5 text-linksuraksha-glow" />
